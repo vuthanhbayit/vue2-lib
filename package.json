@@ -14,7 +14,7 @@
   },
   "keywords": [
     "vue2",
-    "lib",
+    "lib"
   ],
   "main": "dist/demo.umd.js",
   "browser": "dist/demo.es.js",
