@@ -23,6 +23,7 @@ export default defineConfig({
     ],
   },
   build: {
+    minify: false,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'umd'],
@@ -30,10 +31,11 @@ export default defineConfig({
       fileName: format => `demo.${format}.js`,
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', '@vue/composition-api'],
       output: {
         globals: {
           vue: 'Vue',
+          '@vue/composition-api': 'vueCompositionApi',
         },
       },
     },
